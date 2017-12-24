@@ -1,0 +1,18 @@
+<md-input-container>
+  <label>Select defined settings</label>
+  <md-select ng-model="selectedSettingsName" md-on-close="selectSettings()" style="width: 200px;">
+    <md-option ng-value=""><em>clear</em></md-option>
+    <md-option ng-repeat="definedSetting in definedSettings" ng-value="$index">
+      {{definedSetting.name}}
+    </md-option>
+  </md-select>
+</md-input-container>
+    <br>
+
+<md-input-container ng-repeat="param in paramsName">
+  <label>{{param}}</label>
+  <input
+    ng-model="settings[param]"
+    type="text"
+    placeholder="{{defaultValues[param]}} (default)">
+</md-input-container>

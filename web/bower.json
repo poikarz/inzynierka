@@ -1,0 +1,14 @@
+{
+  "name": "asm3biop-web",
+  "description": "ASM3+bioP-web",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

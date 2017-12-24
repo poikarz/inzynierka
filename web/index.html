@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASM3 + bioP</title>
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/styles/app.css">
+  <!-- endinject -->
+</head>
+<body ng-app="asm3biop" ng-cloak>
+
+  <md-toolbar ng-controller="ToolbarController">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex" ng-click="goTo('/')">ASM3 + bioP</h2>
+      <md-button ng-repeat="menuItem in menuItems" ng-click="goTo(menuItem.path)">
+        {{menuItem.name}}
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content flex layout-padding layout-margin ng-view>
+  </md-content>
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.js"></script>
+  <script src="/bower_components/angular-messages/angular-messages.js"></script>
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+  <script src="/bower_components/socket.io-client/socket.io.js"></script>
+  <script src="/bower_components/angular-socket-io/socket.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/nvd3/build/nv.d3.js"></script>
+  <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+
+  <!-- inject:js -->
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/routes.js"></script>
+  <script src="/scripts/controllers/current-simulation.controller.js"></script>
+  <script src="/scripts/controllers/new-simulation.controller.js"></script>
+  <script src="/scripts/controllers/socket.factory.js"></script>
+  <script src="/scripts/controllers/toolbar.controller.js"></script>
+  <script src="/scripts/factories/chart.factory.js"></script>
+  <script src="/scripts/factories/defaultSettings.factory.js"></script>
+  <script src="/scripts/factories/execute.factory.js"></script>
+  <script src="/scripts/factories/settings.factory.js"></script>
+  <script src="/scripts/factories/socket.factory.js"></script>
+  <!-- endinject -->
+</body>
+</html>
